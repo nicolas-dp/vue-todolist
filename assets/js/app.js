@@ -30,25 +30,25 @@ const app = new Vue({
         tasks: [
             { 
                 text: 'Fare la spesa',
-                done: null
+                done: true
 
             },
 
             { 
                 text: 'Passegiata con il cane',
-                done: null
+                done: false
 
             },
 
             { 
                 text: 'Fare l esercizio to do list',
-                done: null
+                done: false
 
             },
 
             { 
                 text: 'Venerdì bere con gli amici',
-                done: null
+                done: true
 
             }
         ]

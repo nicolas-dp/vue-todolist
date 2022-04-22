@@ -12,7 +12,11 @@
 <body>
 
     <div id="app">
+        <ul >
+            <li v-for="task in tasks" v-if="task.done == true" style="text-decoration: line-through;">{{task.text}}</li>
 
+            <li v-else>{{task.text}}</li>
+        </ul>
     </div>
 
     <!-- development version, includes helpful console warnings -->
