@@ -22,3 +22,38 @@ Bonus:
 //ogni todo sarà un oggetto, formato da due proprietà:text, una stringa che indica il testo del todo done, un booleano (true/false) che indica se il todo è stato fatto oppure no
 
 
+const app = new Vue({
+
+    el: "#app",
+
+    data:{
+        tasks: [
+            { 
+                text: 'Fare la spesa',
+                done: null
+
+            },
+
+            { 
+                text: 'Passegiata con il cane',
+                done: null
+
+            },
+
+            { 
+                text: 'Fare l esercizio to do list',
+                done: null
+
+            },
+
+            { 
+                text: 'Venerdì bere con gli amici',
+                done: null
+
+            }
+        ]
+    }
+
+    
+
+})
