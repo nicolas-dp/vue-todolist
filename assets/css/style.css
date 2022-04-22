@@ -24,5 +24,35 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    gap: 1rem;
+}
 
+.input_text>input{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.input_text button{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+ul{
+    list-style: none;
+}
+
+.text_list{
+    width: 50%;
+    text-align: left;
+    margin-top: 3rem;
+    background-color: #F5F7F7;
+    border-radius: 0.5rem;
+}
+
+.text_list li{
+    padding: 1rem;
+}
+
+.text_list li:not(li:last-child){
+    border-bottom: 1px solid gray;
 }

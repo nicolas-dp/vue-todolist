@@ -17,6 +17,9 @@ const app = new Vue({
     el: "#app",
 
     data: {
+
+        newTask: '',
+
         tasks: [
             {
                 text: 'Fare la spesa',
@@ -61,22 +64,27 @@ const app = new Vue({
         },
         /* MILESTONE 3
          Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti. */
-        addTask(event) {
-            console.log(this.tasks);
-            this.tasks.unshift({ text: this.newTask, done: false })
-            console.log(this.newTask);
-            this.newTask = ''
+        addTask() {
+            //console.log(this.tasks);
+            if (this.newTask == "") {
+                alert("devi inserire almeno un carattere")
+            } else {
+                this.tasks.unshift({ text: this.newTask, done: false })
+                console.log(this.newTask);
+                this.newTask = ''
+            }
+
         },
         /* BONUS
         2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa) */
-        
+
         crossText(index) {
             //console.log(this.tasks[index].done);
-                if (this.tasks[index].done == true) {
-                    this.tasks[index].done = false
-                } else if (this.tasks[index].done == false) {
-                    this.tasks[index].done = true
-                }
+            if (this.tasks[index].done == true) {
+                this.tasks[index].done = false
+            } else if (this.tasks[index].done == false) {
+                this.tasks[index].done = true
+            }
         }
     }
 
