@@ -15,15 +15,28 @@
 <body>
 
     <div id="app">
-        <ul>
+        <div class="container">
+            <div class="input">
+                <img width="400" src="https://hiringplatform.boolean.careers/images/logo.png" alt="...">
+                <div class="input_text">
+                    <input type="text" placeholder="Inserisci nuova task" v-model="newTask" @keyup.enter="addTask($event)">
+                    <button @click="addTask(event)">Aggiungi</button>
+                </div>
+            </div>
+            <section class="text_list">
+                <ul>
+                    <!-- MILESTONE 1
+                        Stampare all'interno di una lista, un item per ogni todo. Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato. -->
+                    <li v-for="(task, index) in tasks" v-if="task.done == true" style="text-decoration: line-through;">
+                        {{task.text}} <i class="fa-solid fa-xmark" @click="removeTask(index)"></i></li>
+    
+                    <li v-else>{{task.text}} <i class="fa-solid fa-xmark" @click="removeTask(index)"></i></li>
+                </ul>
 
-            <!-- MILESTONE 1
-Stampare all'interno di una lista, un item per ogni todo. Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato. -->
-            <li v-for="(task, index) in tasks" v-if="task.done == true" style="text-decoration: line-through;">
-                {{task.text}} <i class="fa-solid fa-xmark" @click="removeTask(index)"></i></li>
+            </section>
 
-            <li v-else>{{task.text}} <i class="fa-solid fa-xmark" @click="removeTask(index)"></i></li>
-        </ul>
+
+        </div>
     </div>
 
     <!-- development version, includes helpful console warnings -->
